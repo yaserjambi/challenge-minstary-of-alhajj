@@ -11,7 +11,8 @@
       </div>
 
       <div style="display: flex;justify-content: center;width: 100%;">
-        <div style="background-color: gray; color: white;padding: 10px 14px ; border-radius: 8rem; margin-right: 10px; cursor: pointer;">
+        <div
+          style="background-color: gray; color: white;padding: 10px 14px ; border-radius: 8rem; margin-right: 10px; cursor: pointer;">
           <i style="font-size: 20px;" class="fa fa-filter" aria-hidden="true"></i>
         </div>
 
@@ -71,6 +72,8 @@
           </g>
 
         </svg>
+
+
         المستهدف
       </div>
 
@@ -80,8 +83,9 @@
 
       <!-- #4 -->
       <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-        <svg version="1.1" style="font-family: Roboto; font-size: 12px;" xmlns="http://www.w3.org/2000/svg" width="200"
-          height="200" viewBox="0 0 200 200" aria-hidden="false" aria-label="Interactive chart">
+        <svg *ngIf="action1 == true" version="1.1" style="font-family: Roboto; font-size: 12px;"
+          xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" aria-hidden="false"
+          aria-label="Interactive chart">
 
           <g data-z-index="2" opacity="1" transform="translate(10,47) scale(1 1)" aria-hidden="true"
             style="cursor: pointer;">
@@ -118,6 +122,54 @@
 
         </svg>
 
+
+
+
+        <svg *ngIf="action1 == false" version="1.1" style="font-family: Roboto; font-size: 12px;"
+          xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" aria-hidden="false"
+          aria-label="Interactive chart">
+
+          <g data-z-index="2" opacity="1" transform="translate(10,47) scale(1 1)" aria-hidden="true"
+            style="cursor: pointer;">
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="-1" data-z-index="1" y="5"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                0
+              </text></g>
+
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="20" data-z-index="1" y="26"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                0
+              </text></g>
+
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="-4" data-z-index="1" y="26"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                فوج
+              </text></g>
+          </g>
+          <g data-z-index="3" aria-hidden="false">
+            <g data-z-index="0.1" opacity="1" transform="translate(10,47) scale(1 1)"
+              clip-path="url(#highcharts-ez6pvq6-154-)" style="cursor: pointer;" aria-hidden="false">
+              <path fill="white"
+                d="M 90 3.3119999999999976 A 65.688 65.688 0 0 1 89.934312010948 3.312032843997258 A 7.038000000000004 7.038000000000004 0 1 1 89.94838800860201 17.388025805997856 A 51.611999999999995 51.611999999999995 0 0 0 90 17.388000000000005 A 7.038000000000004 7.038000000000004 0 1 1 90 3.3119999999999976"
+                sweep-flag="0" stroke-linecap="round" stroke-linejoin="round" tabindex="-1" role="img" aria-label="0."
+                style="outline: none;"></path>
+            </g>
+            <g data-z-index="0.1" opacity="1" transform="translate(10,47) scale(1 1)" clip-path="none"
+              aria-hidden="true"></g>
+          </g>
+
+        </svg>
+
+
+
+
+
+
+
+
         الإجمالي الكلي
       </div>
 
@@ -126,8 +178,9 @@
 
       <!-- #3 -->
       <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-        <svg version="1.1" style="font-family: Roboto; font-size: 12px;" xmlns="http://www.w3.org/2000/svg" width="200"
-          height="200" viewBox="0 0 200 200" aria-hidden="false" aria-label="Interactive chart">
+        <svg *ngIf="action3 == true" version="1.1" style="font-family: Roboto; font-size: 12px;"
+          xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" aria-hidden="false"
+          aria-label="Interactive chart">
 
           <g data-z-index="2" opacity="1" transform="translate(10,47) scale(1 1)" aria-hidden="true"
             style="cursor: pointer;">
@@ -166,6 +219,46 @@
 
         </svg>
 
+
+        <svg *ngIf="action3 == false" version="1.1" style="font-family: Roboto; font-size: 12px;"
+          xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" aria-hidden="false"
+          aria-label="Interactive chart">
+
+          <g data-z-index="2" opacity="1" transform="translate(10,47) scale(1 1)" aria-hidden="true"
+            style="cursor: pointer;">
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="-1" data-z-index="1" y="5"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                0
+              </text></g>
+
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="20" data-z-index="1" y="26"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                0
+              </text></g>
+
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="-4" data-z-index="1" y="26"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                فوج
+              </text></g>
+          </g>
+          <g data-z-index="3" aria-hidden="false">
+            <g data-z-index="0.1" opacity="1" transform="translate(10,47) scale(1 1)"
+              clip-path="url(#highcharts-ez6pvq6-154-)" style="cursor: pointer;" aria-hidden="false">
+              <path fill="white"
+                d="M 90 3.3119999999999976 A 65.688 65.688 0 0 1 89.934312010948 3.312032843997258 A 7.038000000000004 7.038000000000004 0 1 1 89.94838800860201 17.388025805997856 A 51.611999999999995 51.611999999999995 0 0 0 90 17.388000000000005 A 7.038000000000004 7.038000000000004 0 1 1 90 3.3119999999999976"
+                sweep-flag="0" stroke-linecap="round" stroke-linejoin="round" tabindex="-1" role="img" aria-label="0."
+                style="outline: none;"></path>
+            </g>
+            <g data-z-index="0.1" opacity="1" transform="translate(10,47) scale(1 1)" clip-path="none"
+              aria-hidden="true"></g>
+          </g>
+
+        </svg>
+
+
         إحصائية الوصول
 
       </div>
@@ -175,8 +268,9 @@
 
       <!-- #2 -->
       <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-        <svg version="1.1" style="font-family: Roboto; font-size: 12px;" xmlns="http://www.w3.org/2000/svg" width="200"
-          height="200" viewBox="0 0 200 200" aria-hidden="false" aria-label="Interactive chart">
+        <svg *ngIf="action2 == true" version="1.1" style="font-family: Roboto; font-size: 12px;"
+          xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" aria-hidden="false"
+          aria-label="Interactive chart">
           <g data-z-index="2" opacity="1" transform="translate(10,47) scale(1 1)" aria-hidden="true"
             style="cursor: pointer;">
 
@@ -215,6 +309,43 @@
 
         </svg>
 
+        <svg *ngIf="action2 == false" version="1.1" style="font-family: Roboto; font-size: 12px;"
+          xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" aria-hidden="false"
+          aria-label="Interactive chart">
+
+          <g data-z-index="2" opacity="1" transform="translate(10,47) scale(1 1)" aria-hidden="true"
+            style="cursor: pointer;">
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="-1" data-z-index="1" y="5"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                0
+              </text></g>
+
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="20" data-z-index="1" y="26"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                0
+              </text></g>
+
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="-4" data-z-index="1" y="26"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                فوج
+              </text></g>
+          </g>
+          <g data-z-index="3" aria-hidden="false">
+            <g data-z-index="0.1" opacity="1" transform="translate(10,47) scale(1 1)"
+              clip-path="url(#highcharts-ez6pvq6-154-)" style="cursor: pointer;" aria-hidden="false">
+              <path fill="white"
+                d="M 90 3.3119999999999976 A 65.688 65.688 0 0 1 89.934312010948 3.312032843997258 A 7.038000000000004 7.038000000000004 0 1 1 89.94838800860201 17.388025805997856 A 51.611999999999995 51.611999999999995 0 0 0 90 17.388000000000005 A 7.038000000000004 7.038000000000004 0 1 1 90 3.3119999999999976"
+                sweep-flag="0" stroke-linecap="round" stroke-linejoin="round" tabindex="-1" role="img" aria-label="0."
+                style="outline: none;"></path>
+            </g>
+            <g data-z-index="0.1" opacity="1" transform="translate(10,47) scale(1 1)" clip-path="none"
+              aria-hidden="true"></g>
+          </g>
+
+        </svg>
 
         إحصائية الخروج
       </div>
@@ -223,7 +354,7 @@
 
       <!-- #1 -->
       <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-        <svg version="1.1" style="font-family: Roboto; font-size: 12px;" xmlns="http://www.w3.org/2000/svg" width="200"
+        <svg *ngIf="action4 == true" version="1.1" style="font-family: Roboto; font-size: 12px;" xmlns="http://www.w3.org/2000/svg" width="200"
           height="200" viewBox="0 0 200 200" aria-hidden="false" aria-label="Interactive chart">
 
           <g data-z-index="2" opacity="1" transform="translate(10,47) scale(1 1)" aria-hidden="true"
@@ -261,6 +392,55 @@
 
 
         </svg>
+
+
+
+
+        <svg *ngIf="action4 == false"  version="1.1" style="font-family: Roboto; font-size: 12px;" xmlns="http://www.w3.org/2000/svg" width="200"
+          height="200" viewBox="0 0 200 200" aria-hidden="false" aria-label="Interactive chart">
+
+          <g data-z-index="2" opacity="1" transform="translate(10,47) scale(1 1)" aria-hidden="true"
+            style="cursor: pointer;">
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="-4" data-z-index="1" y="5"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                7,279
+              </text></g>
+
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="20" data-z-index="1" y="26"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                81
+              </text></g>
+
+            <g data-z-index="1" transform="translate(73,58)" style="cursor: pointer;"><text
+                font-family='Roboto-Regular,Roboto' x="-4" data-z-index="1" y="26"
+                style="color: rgb(0, 0, 0); font-size: 15px; font-weight: bold; fill: #fff;">
+                فوج
+              </text></g>
+          </g>
+          <g data-z-index="3" aria-hidden="false">
+            <g data-z-index="0.1" opacity="1" transform="translate(10,47) scale(1 1)"
+              clip-path="url(#highcharts-ez6pvq6-162-)" style="cursor: pointer;" aria-hidden="false">
+              <path fill="#beadfe"
+                d="M 90 3.3119999999999976 A 65.688 65.688 0 1 1 89.93431201094796 3.312032843997258 M 89.94838800860197 17.388025805997856 A 51.611999999999995 51.611999999999995 0 1 0 90 17.388000000000005"
+                sweep-flag="0" stroke-linecap="round" stroke-linejoin="round" tabindex="-1" role="img" aria-label="1."
+                style="outline: none;"></path>
+            </g>
+            <g data-z-index="0.1" opacity="1" transform="translate(10,47) scale(1 1)" clip-path="none"
+              aria-hidden="true"></g>
+          </g>
+
+        </svg>
+
+
+
+
+
+
+
+
+
         المتبقي
       </div>
 
@@ -339,7 +519,9 @@
 
     <div class="card-col-section">
       <ul>
-        <li>أفواج متبقية</li>
+        <li style="color:rgb(190, 173, 254);">
+          <span style="color: white;">أفواج متبقية</span>
+        </li>
       </ul>
 
       <table style="width: 100%;">
@@ -368,7 +550,9 @@
 
     <div class="card-col-section">
       <ul>
-        <li>أفواج خرجت</li>
+        <li style="color:rgb(60, 204, 215);">
+          <span style="color: white;">أفواج متبقية</span>
+        </li>
       </ul>
 
       <table style="width: 100%;">
@@ -397,7 +581,9 @@
 
     <div class="card-col-section">
       <ul>
-        <li>أفواج وصلت</li>
+        <li style="color:rgb(239, 205, 53);">
+          <span style="color: white;">أفواج متبقية</span>
+        </li>
       </ul>
 
       <table style="width: 100%;">

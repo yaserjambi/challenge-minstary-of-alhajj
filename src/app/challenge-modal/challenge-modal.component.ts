@@ -77,6 +77,10 @@ export class ChallengeModalComponent implements OnInit {
 
   arrayList3 = [];
 
+  action1 = false;
+  action2 = false;
+  action3 = false;
+  action4 = false;
   ngOnInit(): void {
 
     setTimeout(() => {
@@ -85,6 +89,10 @@ export class ChallengeModalComponent implements OnInit {
         departure: "09:50:00",
         arrival: "10:38:00"
       })
+
+      this.action1 = true;
+      this.action2 = true;
+      this.action4 = true;
     }, 3000)
 
 
@@ -95,6 +103,8 @@ export class ChallengeModalComponent implements OnInit {
         departure: "10:00:00",
         arrival: "10:39:00"
       })
+      this.action2 = false;
+      this.action3 = true;
     }, 7000)
 
 
