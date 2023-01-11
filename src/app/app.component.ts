@@ -1,5 +1,6 @@
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
+import { Route, Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private route: Router) {
+
+  }
 
 
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
@@ -25,5 +29,10 @@ export class AppComponent {
       );
     }
 
+  }
+
+
+  go(text) {
+    this.route.navigate(["./" + text])
   }
 }

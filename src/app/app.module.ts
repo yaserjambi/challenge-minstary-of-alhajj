@@ -11,13 +11,19 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { NgxGraphModule } from '@swimlane/ngx-graph';
+import {MatMenuModule} from '@angular/material/menu';
+import { ChallengeModalComponent } from './challenge-modal/challenge-modal.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChallengeOneComponent,
     ChallengeTwoComponent,
+    ChallengeModalComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -29,7 +35,9 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
     MatIconModule,
     NgbModule,
     FormsModule,
-    NgxMaterialTimepickerModule
+    NgxMaterialTimepickerModule,
+    NgxGraphModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

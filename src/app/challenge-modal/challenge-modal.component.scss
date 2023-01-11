@@ -1,0 +1,73 @@
+.fullscreen {
+  width: 1900px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #151d24;
+}
+
+
+
+.navBar {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  background-color: #26303d;
+  color: white;
+  border-bottom: 1px solid gray;
+  padding-bottom: 15px;
+}
+
+.navBar p {
+  margin: 0 20px;
+}
+
+.navBarRight {
+  display: flex;
+  height: 60vh;
+  justify-content: right;
+  height: auto;
+  align-items: center;
+}
+
+
+
+.navBarLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
+}
+
+
+
+
+.card-section {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  background-color: #26303d;
+  padding-top: 15px;
+}
+
+.card-col-section {
+  width: 31%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 0 auto;
+}
+
+
+th {
+  color: #c0c0c0;
+}
+
+th,
+td {
+  text-align: center;
+}
