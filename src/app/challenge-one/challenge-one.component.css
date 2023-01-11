@@ -1,0 +1,149 @@
+.col-section {
+  background-color: #a6cfe6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.drop-section-one {
+  width: 100%;
+  height: 30vh;
+}
+
+
+.drop-section-two {
+  width: 100%;
+  height: 30vh;
+}
+
+
+
+
+.example-container1 {
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+  vertical-align: top;
+}
+
+.example-container2 {
+  width: 100%;
+  display: flex;
+  vertical-align: top;
+}
+
+
+
+.example-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 90px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+
+}
+
+
+.example-list2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: solid 1px rgb(0, 0, 0);
+  min-height: 90px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+
+}
+
+.example-box {
+  height: 130px;
+  width: 130px;
+  color: black;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 5px;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+  border-bottom: solid 1px red;
+
+  border-radius: 8rem;
+
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+
+.arrow-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+.arrow-1 {
+  font-size: 55px;
+}
+
+
+
+
+.day {
+  text-align: center;
+  padding: 7px;
+  border-radius: 1rem;
+  width: 100% !important;
+}
+
+.ngb-dp-day {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ngb-dp-weekday {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ngb-dp-month {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* .ng-star-inserted {
+  width: 100% !important;
+  height: 100% !important;
+} */

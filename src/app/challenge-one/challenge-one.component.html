@@ -1,0 +1,93 @@
+<div class="col-section">
+
+
+
+  <div cdkDropListGroup>
+    <div class="drop-section-one">
+      <div class="example-container1">
+
+        <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item.name}}</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="drop-section-two">
+      <div class="example-container2">
+        <div cdkDropList [cdkDropListData]="done" class="example-list2" (cdkDropListDropped)="drop($event)">
+          <ng-container *ngFor="let item of done;let i = index;">
+            <div class="arrow-c" *ngIf="i !== done.length - 1 && i !==0">
+              <span class="arrow-1">&#8594;</span>
+            </div>
+            <div class="arrow-c" *ngIf="i == done.length - 1">
+              <span class="arrow-1">&#8594;</span>
+            </div>
+            <div class="example-box" cdkDrag *ngIf="item.name !== ''" data-toggle="modal" (click)="selectFromList(i)"
+              data-target=".bd-example-modal-lg">{{item.name}}</div>
+          </ng-container>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" dir="ltr"
+  aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <mat-tab-group mat-stretch-tabs>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>calendar_today</mat-icon>
+          </ng-template>
+
+          <ngb-datepicker style="width: 100%;" *ngIf="indexSelected !== null" #dp
+            [(ngModel)]="done[indexSelected].date"></ngb-datepicker>
+
+
+
+        </mat-tab>
+
+        <mat-tab style="width: 100%;">
+          <ng-template mat-tab-label>
+            <mat-icon>timer</mat-icon>
+          </ng-template>
+
+          <div class="row-section"
+            style="width: 100%;display: flex;flex-direction: column;align-items: center; justify-content: center;">
+            <br>
+            <br>
+
+            <ngb-timepicker *ngIf="indexSelected !== null" [(ngModel)]="done[indexSelected].time"
+              [meridian]="true"></ngb-timepicker>
+
+            <br>
+
+            <ng-container *ngIf="indexSelected !== null" style="display: flex;">
+              <p>
+                time: <span *ngIf="done[indexSelected]?.time !== null">{{done[indexSelected]?.time?.hour}}</span>:<span
+                *ngIf="done[indexSelected]?.time !== null">{{done[indexSelected]?.time?.minute}}</span>
+              </p>
+
+              <!-- <pre>  time: {{done[indexSelected]?.time?.hour  +":"+ done[indexSelected]?.time?.minute | json}}</pre> -->
+            </ng-container>
+            <br>
+            <br>
+
+          </div>
+
+
+
+
+
+        </mat-tab>
+
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
