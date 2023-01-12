@@ -61,22 +61,22 @@
             </svg:g>
           </ng-template>
 
-          <ng-template #nodeTemplate let-node  class="hoverTouch">
-            <svg:g class="node hoverTouch">
-              <svg:rect [attr.width]="node.dimension.width" [attr.height]="node.dimension.height"
-                [attr.fill]="'gray'"  class="hoverTouch"/>
+          <ng-template #nodeTemplate let-node >
+            <svg:g class="node hoverTouch" >
+              <svg:rect [attr.width]="node.dimension.width" [attr.height]="node.dimension.height" [attr.fill]="'gray'"  
+                class="hoverTouch" [matMenuTriggerFor]="menu"/>
               <svg:text alignment-baseline="central" [attr.x]="23" [attr.y]="40" fill="#FFF" [matMenuTriggerFor]="menu"
-                (click)="onRightClick(node)">
+                >
                 {{node.count}}
               </svg:text>
 
               <svg:text alignment-baseline="central" [attr.x]="-60" [attr.y]="60" fill="#FFF" [matMenuTriggerFor]="menu"
-                (click)="onRightClick(node)">
+                >
                 {{node.code}}
               </svg:text>
 
               <svg:text alignment-baseline="central" [attr.x]="-80" [attr.y]="80" fill="#FFF" [matMenuTriggerFor]="menu"
-                (click)="onRightClick(node)">
+                >
                 {{node.label}}
               </svg:text>
             </svg:g>
