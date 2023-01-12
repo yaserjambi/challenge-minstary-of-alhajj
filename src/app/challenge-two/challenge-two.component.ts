@@ -26,19 +26,33 @@ export class ChallengeTwoComponent implements OnInit {
   nodes = [
     {
       id: 'first',
-      label: 'محطة الجمرات'
+      label: 'محطة الجمرات',
+      count: '800',
+      code:"JMR"
     }, {
       id: 'second',
-      label: 'المسجد الحرام'
+      label: 'المسجد الحرام',
+      count: '11,650',
+      code:"HRM"
+
     }, {
       id: 'c1',
-      label: 'مخيمات منى'
+      label: 'مخيمات منى',
+      count: '1,000',
+      code:"MIN"
+
     }, {
       id: 'c2',
-      label: 'مشعر عرفات'
+      label: 'مشعر عرفات',
+      count: '43,434',
+      code:"ARF"
+
     }, {
       id: 'd',
-      label: 'مشعر مزدلفة'
+      label: 'مشعر مزدلفة',
+      count: '0',
+      code:"MUZ"
+
     }
   ]
 
@@ -129,7 +143,7 @@ export class ChallengeTwoComponent implements OnInit {
   ];
 
   draggingEnabled: boolean = false;
-  panningEnabled: boolean = false;
+  panningEnabled: boolean = true;
   zoomEnabled: boolean = false;
 
 
