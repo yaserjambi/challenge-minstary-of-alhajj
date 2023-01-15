@@ -43,13 +43,13 @@
     <div class="card-left-section">
 
       <div class="page" style="overflow: hidden;">
-        <ngx-graph [links]="links" [nodes]="nodes" [clusters]="clusters" [layout]="'dagreCluster'" [curve]="curve"
+        <ngx-graph [links]="links" [nodes]="nodes" [clusters]="clusters" [layout]="layout" [curve]="curve"
           [draggingEnabled]="draggingEnabled" [panningEnabled]="panningEnabled" [enableZoom]="zoomEnabled"
           [panOnZoom]="panOnZoom" [autoZoom]="autoZoom" [autoCenter]="autoCenter" [update$]="update$"
           [center$]="center$" [view]="[1000, 1200]" style="cursor: pointer;">
 
           <ng-template #defsTemplate>
-            <svg:marker id="arrow" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="4" markerHeight="4"
+            <svg:marker id="arrow" viewBox="0 -5 10 10" refX="30" refY="0" markerWidth="6" markerHeight="6"
               orient="auto">
               <svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
             </svg:marker>
@@ -60,23 +60,23 @@
 
             </svg:g>
           </ng-template>
-
-          <ng-template #nodeTemplate let-node >
-            <svg:g class="node hoverTouch" >
-              <svg:rect [attr.width]="node.dimension.width" [attr.height]="node.dimension.height" [attr.fill]="'gray'"  
-                class="hoverTouch" [matMenuTriggerFor]="menu"/>
-              <svg:text alignment-baseline="central" [attr.x]="23" [attr.y]="40" fill="#FFF" [matMenuTriggerFor]="menu"
-                >
+          <!-- node.dimension.height -->
+          <!-- node.dimension.width -->
+          <ng-template #nodeTemplate let-node>
+            <svg:g class="node hoverTouch">
+              <svg:rect [attr.width]="node.dimension.width" [attr.height]="node.dimension.height"
+                [attr.fill]="'#445564'" class="hoverTouch" [matMenuTriggerFor]="menu" />
+              <svg:text alignment-baseline="central" [attr.x]="23" [attr.y]="40" fill="#FFF" [matMenuTriggerFor]="menu">
                 {{node.count}}
               </svg:text>
 
-              <svg:text alignment-baseline="central" [attr.x]="-60" [attr.y]="60" fill="#FFF" [matMenuTriggerFor]="menu"
-                >
+              <svg:text alignment-baseline="central" [attr.x]="-60" [attr.y]="60" fill="#FFF"
+                [matMenuTriggerFor]="menu">
                 {{node.code}}
               </svg:text>
 
-              <svg:text alignment-baseline="central" [attr.x]="-80" [attr.y]="80" fill="#FFF" [matMenuTriggerFor]="menu"
-                >
+              <svg:text alignment-baseline="central" [attr.x]="-80" [attr.y]="80" fill="#FFF"
+                [matMenuTriggerFor]="menu">
                 {{node.label}}
               </svg:text>
             </svg:g>
@@ -84,8 +84,8 @@
           </ng-template>
 
           <ng-template #linkTemplate let-link>
-            <svg:g class="edge">
-              <svg:path class="line" stroke-width="2" marker-end="url(#arrow)">
+            <svg:g class="edge" x1="0" y1="80" x2="100" y2="20">
+              <svg:path class="line" stroke-width="2" stroke="gray" marker-end="url(#arrow)">
               </svg:path>
               <svg:text class="edge-label" text-anchor="middle">
                 <textPath class="text-path" [attr.href]="'#' + link.id" fill="#FFF"

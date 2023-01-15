@@ -28,30 +28,30 @@ export class ChallengeTwoComponent implements OnInit {
       id: 'first',
       label: 'محطة الجمرات',
       count: '800',
-      code:"JMR"
+      code: "JMR"
     }, {
       id: 'second',
       label: 'المسجد الحرام',
       count: '11,650',
-      code:"HRM"
+      code: "HRM"
 
     }, {
       id: 'c1',
       label: 'مخيمات منى',
       count: '1,000',
-      code:"MIN"
+      code: "MIN"
 
     }, {
       id: 'c2',
       label: 'مشعر عرفات',
       count: '43,434',
-      code:"ARF"
+      code: "ARF"
 
     }, {
       id: 'd',
       label: 'مشعر مزدلفة',
       count: '0',
-      code:"MUZ"
+      code: "MUZ"
 
     }
   ]
@@ -101,8 +101,9 @@ export class ChallengeTwoComponent implements OnInit {
   ]
 
 
-
-
+  dagreLayout = {
+    ranksep: 50 //set here the value you want
+  }
   layout = 'dagreCluster';
   layouts: any[] = [
     {
@@ -192,6 +193,9 @@ export class ChallengeTwoComponent implements OnInit {
     if (curveType === 'Step Before') {
       this.curve = shape.curveStepBefore;
     }
+
+    console.log(this.curveType)
+
   }
 
   setLayout(layoutName: string): void {
@@ -203,19 +207,6 @@ export class ChallengeTwoComponent implements OnInit {
       this.clusters = this.clusters;
     }
   }
-
-
-  onRightClick(test) {
-    console.log(test)
-  }
-
-
-
-
-
-
-
-
 
 
 
